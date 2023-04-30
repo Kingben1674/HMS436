@@ -42,7 +42,7 @@ function pageLoad() {
 
               document.getElementById("weatherimg" + (i + 1)).setAttribute("src", imageNum);
 
-              document.getElementById("temp" + (i + 1)).innerHTML = data[i].Temperature.Value + '\u00B0' +  "F";
+              document.getElementById("temp" + (i + 1)).innerHTML = data[i].Temperature.Value + '\u00B0' + "F";
 
               if (data[i].HasPrecipitation == true) {
                   document.getElementById("weather" + (i + 1)).innerHTML = data[i].PrecipitationIntensity + " " + data[i].PrecipitationType;
