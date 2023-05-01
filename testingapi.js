@@ -3,7 +3,7 @@ window.onload = pageLoad;
 function pageLoad() {
   const apiKey = 'yiVAx0WsTqB1wLo5s0WYChEHnfwK92Be';
   const locationKey = '2089870';
-  const apiUrl = `https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${apiKey}`;
+  const apiUrl = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${apiKey}`;
 
 
   fetch(apiUrl)
