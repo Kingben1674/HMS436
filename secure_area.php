@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,9 +10,39 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_POST['logout'])) {
+        $_SESSION['loggedIn'] = false;
+        session_destroy();
+        header('Location: index.php');
+        exit;
+    }
+
+    if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
+        header('Location: index.php');
+        exit;
+    }
+    ?>
+
+    
+
+    <div class="col-12">
+        <form action="logout.php" method="post">
+            <a href="index.html">
+                <input type="submit" id="logoutButton" class="btn btn-danger float-start mt-2" value="logout">
+                </input>
+            </a>
+        </form>
+    </div>
+
+    <style>
+        #logoutButton {
+            height: 50px;
+            width: 100px;
+        }
+    </style>
 
     <div class=bottomStuff>
-        <a href=logout.php> || Logout ||</a>
 
         <H1> Admin Home </H1>
 
@@ -38,7 +71,8 @@
                 clear: both;
             }
 
-            h1, h3 {
+            h1,
+            h3 {
                 text-align: center;
             }
 
@@ -169,8 +203,7 @@
             </button>
 
             <button type="button">
-                <img src="person.svg" width="80"
-                    height="80  " />
+                <img src="person.svg" width="80" height="80  " />
                 <h3>
                     Create Paitent
                 </h3>

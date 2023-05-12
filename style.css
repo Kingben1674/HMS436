@@ -62,21 +62,18 @@ img.avatar {
 	margin-top: 5px;
 	display: none;
 }
-Save the above code in a file with .css extension, and link it to your HTML file using the <link> tag within the <head> section, like this:
 
-html
-Copy code
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Hospital Staff Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+.displayName{
+	margin-top: 30px;
+	margin-left: 50px;
+}
 
-	<!-- ... rest of the HTML code ... -->
+.inputs{
+	width: 50px;
+	color: blue;
+}
 
-</body>
-</html>
+.formStuff{
+	border: 5px blue dotted;
+	width: 300px;
+}
