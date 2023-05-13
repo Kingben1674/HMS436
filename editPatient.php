@@ -28,14 +28,6 @@ session_start();
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <form action="logout.php" method="post">
-                    <a href="index.html">
-                        <input type="submit" class="btn btn-danger float-start mt-2" value="Logout">
-                        </input>
-                    </a>
-                </form>
-            </div>
             <?php
 
             $db = mysqli_connect("studentdb-maria.gl.umbc.edu", "benr2", "benr2", "benr2");
@@ -120,7 +112,7 @@ session_start();
 
     <div class="row">
         <div class="col-12 text-center">
-            <button type="reset" class="btn btn-secondary">Discard Changes</button>
+            <button type="reset" class="btn btn-secondary" id="discard" onclick="window.location.href= 'secure_area.php';">Discard Changes</button>
             <button type="submit" class="btn btn-primary">Save</button>
         </div>
     </div>

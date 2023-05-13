@@ -30,5 +30,23 @@ if ($submitted_username == $login && $submitted_password == $password) {
 } else {
 	// the username and password are incorrect, display an error message
 	$error = "Invalid username or password.";
+
+	?>
+
+	<style>
+		.invalidText{
+			text-align: center;
+			margin: 50px;
+		}
+	</style>
+
+	<div class="invalidText">
+		<h1>Invalid Login</h1>
+		<h3>Please re-enter credentials</h3>
+		<a href="index.php">Go Back</a>
+	</div>
+	<?php
 }
+
+
 ?>
