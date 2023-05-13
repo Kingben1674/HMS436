@@ -28,4 +28,12 @@ CREATE TABLE insurance(
   FOREIGN KEY (patient_id) REFERENCES patients(patient_id)
 );
 
+CREATE TABLE caresFor (
+    staff_id INT NOT NULL,
+    patient_id INT NOT NULL,
+    PRIMARY KEY (staff_id, patient_id),
+    FOREIGN KEY (staff_id) REFERENCES staff(staff_id),
+    FOREIGN KEY (patient_id) REFERENCES patients(patient_id)
+);
+
 
