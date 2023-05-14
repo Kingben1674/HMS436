@@ -57,7 +57,7 @@ require 'dbcon.php';
 					echo 	"
 							
 								<div class=hero-backgroundcolor>
-									<p> ".$row["fname"]." ".$row["lname"]." ".$row["email"]." - ".$row["insurance_provider"].":&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+									<p> ".$row["patient_fname"]." ".$row["patient_lname"]." ".$row["email"]." - ".$row["dob"]."".$row["address"]":&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
 									<a href=edit.php?id=".$row["id"].">Edit Patient</a><br><br></p><Hr>
 								</div>
 							";
