@@ -1,9 +1,9 @@
 <?php
 
 $host="studentdb-maria.gl.umbc.edu";
-    $user="ywang9";
-    $pass="ywang9";
-    $db="ywang9";
+    // $user="";
+    // $pass="";
+    // $db="";
 
 
 // Create connection
