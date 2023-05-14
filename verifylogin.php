@@ -10,13 +10,43 @@ $password = "test";
 $submitted_username = $_POST['username'];
 $submitted_password = $_POST['password'];
 
-if ($submitted_username == $username && $submitted_password == $password) {
+$db = mysqli_connect("studentdb-maria.gl.umbc.edu", "benr2", "benr2", "benr2");
+
+$constructed_query = "SELECT login_id, password FROM staff";
+
+$result = mysqli_query($db, $constructed_query);
+
+$row_array = mysqli_fetch_array($result);
+
+$login = $row_array['login_id'];
+$password = $row_array['password'];
+
+if ($submitted_username == $login && $submitted_password == $password) {
 	// the username and password are correct, start a session and redirect to the secure area
 	$_SESSION['username'] = $username;
+	$_SESSION['loggedIn'] = true;
 	header("Location: secure_area.php");
 	exit();
 } else {
 	// the username and password are incorrect, display an error message
 	$error = "Invalid username or password.";
+
+	?>
+
+	<style>
+		.invalidText{
+			text-align: center;
+			margin: 50px;
+		}
+	</style>
+
+	<div class="invalidText">
+		<h1>Invalid Login</h1>
+		<h3>Please re-enter credentials</h3>
+		<a href="index.php">Go Back</a>
+	</div>
+	<?php
 }
+
+
 ?>
