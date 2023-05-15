@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Create a New Patient</title>
+    <style>
+		body {
+			text-align: center;
+		}
+		form {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Create New Patient</h1>
+
+	<form action="submit.php" method="post">
+
+		<input type="text" name="patient_fname" placeholder="First Name">
+        <input type="text" name="patient_lname" placeholder="Last Name">			
+		<input type="email" name="email" placeholder="Email">
+        <input type="tel" name="phone_number" placeholder="Phone">
+        <br>
+        <br>
+		<input type="text" name="address" placeholder="Address">
+        <input type="text" name="social_security" placeholder="Social Security">
+        <input type="text" name="ethnicity" placeholder="Ethnicity">
+        <input type="date" name="dob" min="1900-01-01" max="<?php echo date('Y-m-d'); ?>" placeholder="MM/DD/YY">
+        <br>
+        <br>
+        <br>
+        <h1>Insurance Information</h1>
+        <input type="text" name="insurance_name" placeholder="Insurance Name">
+        <input type="text" name="group_num" placeholder="Group Number">
+        <input type="text" name="policy_num" placeholder="Policy Number">
+
+        <br>
+        <br>
+        <br>
+        <h1>Emergency Contact</h1>
+		<input type="text" name="emergency_contact_fname" placeholder="First Name ">
+        <input type="text" name="emergency_contact_lname" placeholder="Last Name">
+        <input type="text" name="emergency_contact_phone" placeholder="Phone">
+
+        <br>
+        <br>		
+		<button type="submit" name="submit">Submit</button>
+
+	</form>
+</body>
+ </html>
