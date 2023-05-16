@@ -57,7 +57,7 @@ session_start();
                                             address = '$address',
                                             phone_number = '$phoneNumber',
                                             email = '$email',
-                                            social_security = '$ssn'.
+                                            social_security = '$ssn',
                                             ethnicity = '$ethniciy'
                                              WHERE patient_id='$patient_id'";
 
